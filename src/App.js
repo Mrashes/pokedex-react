@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PokemonInput from './'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <h2>Pokemon Input:</h2>
+          <input type="text"/>
+        {/* <PokemonInput /> */}
+        <hr/>
+        <h2>Pokemon List:</h2>
+        <div>
+          <span>Bulbasaur</span>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/* <PokemonList/> */}
       </div>
     );
   }
