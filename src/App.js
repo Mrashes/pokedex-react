@@ -13,7 +13,7 @@ class App extends Component {
         <hr/>
         <h2>Pokemon List:</h2>
         <div>
-          <span>Bulbasaur</span>
+          <span></span>
         </div>
         {/* <PokemonList/> */}
       </div>
