@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {selectUser} from '../actions/index'
+// import {selectUser} from '../actions/index'
 
-class UserList extends Component {
+class PokemonList extends Component {
     
     createListItems() {
         return this.props.pokemon.map((pokemon) => {
             return (
                 <li 
                     key={pokemon.id} 
-                    onClick={() => this.props.selectUser(user)}
                 >
-                {user.first} {user.last}</li>
+                {pokemon.name}</li>
             )
         });
     }
@@ -27,14 +26,14 @@ class UserList extends Component {
     }
 }
 
-function matchDispatchToProps(dispatch) {
-    return bindActionCreators({selectUser: selectUser}, dispatch)
-}
+// function matchDispatchToProps(dispatch) {
+//     return bindActionCreators({selectPokemon: selectUser}, dispatch)
+// }
 
 function mapStateToProps(state) {
     return {
-      users: state.users
+      pokemon: state.pokemon
     };
   }
-  
-export default connect(mapStateToProps, matchDispatchToProps)(UserList);
+//   matchDispatchToProps
+export default connect(mapStateToProps)(PokemonList);

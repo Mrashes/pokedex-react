@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PokemonInput from './'
+import PokemonList from './dev/containers/pokemon-list'
 
 class App extends Component {
   render() {
@@ -12,10 +12,7 @@ class App extends Component {
         {/* <PokemonInput /> */}
         <hr/>
         <h2>Pokemon List:</h2>
-        <div>
-          <span></span>
-        </div>
-        {/* <PokemonList/> */}
+        <PokemonList/>
       </div>
     );
   }
