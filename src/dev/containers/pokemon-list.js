@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import Pokemon from "../components/pokemon"
 // import {selectUser} from '../actions/index'
 
 class PokemonList extends Component {
@@ -11,7 +12,8 @@ class PokemonList extends Component {
                 <li 
                     key={pokemon.id} 
                 >
-                {pokemon.name}</li>
+                    <Pokemon name={pokemon.name} type={pokemon.type} species={pokemon.species} />
+                </li>
             )
         });
     }
